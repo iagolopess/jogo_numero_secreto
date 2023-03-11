@@ -9,8 +9,9 @@ recognition.start();
 recognition.addEventListener('result', onSpeak);
 
 function onSpeak(element){
-    chute = element.results[0][0].transcript;
+    chute = fixNumeroVoz(element.results[0][0].transcript);
     exibeChuteNaTela(chute);
+    
     verificaSeChutePossuiValorValido(chute);
 
 }
@@ -23,3 +24,4 @@ function exibeChuteNaTela(chute){
 }
 
 recognition.addEventListener('end', () => {recognition.start()});
+

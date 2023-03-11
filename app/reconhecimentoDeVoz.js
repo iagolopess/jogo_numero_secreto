@@ -10,7 +10,6 @@ recognition.addEventListener('result', onSpeak);
 
 function onSpeak(element){
     chute = fixNumeroVoz(element.results[0][0].transcript);
-    //chute = element.results[0][0].transcript;
     exibeChuteNaTela(chute);
     
     verificaSeChutePossuiValorValido(chute);

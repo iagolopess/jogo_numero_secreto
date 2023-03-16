@@ -8,6 +8,8 @@ recognition.start();
 
 recognition.addEventListener('result', onSpeak);
 
+vidas.innerHTML = '<i class="fa-sharp fa-solid fa-heart"></i> '.repeat(numeroDeVidas);
+
 function onSpeak(element){
     chute = fixNumeroVoz(element.results[0][0].transcript);
     exibeChuteNaTela(chute);
